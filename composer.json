@@ -1,0 +1,62 @@
+{
+    "name": "heinhtet/api-authorizer",
+    "description": "Protect Laravel APIs with HMAC-SHA256 request signing headers (X-POWERED-BY, X-TIMESTAMP, X-SIGNATURE) - authenticity, tamper-proofing and replay-attack prevention.",
+    "keywords": [
+        "laravel",
+        "api",
+        "security",
+        "hmac",
+        "sha256",
+        "signature",
+        "middleware",
+        "authorizer",
+        "replay-attack"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Hein Htet",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.24",
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HeinHtet\\ApiAuthorizer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HeinHtet\\ApiAuthorizer\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HeinHtet\\ApiAuthorizer\\ApiAuthorizerServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "pint": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
