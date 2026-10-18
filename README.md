@@ -1,7 +1,7 @@
 # Laravel API Authorizer
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/heinhtet/api-authorizer.svg)](https://packagist.org/packages/heinhtet/api-authorizer)
-[![Tests](https://github.com/heinhtet/api-authorizer/actions/workflows/tests.yml/badge.svg)](https://github.com/heinhtet/api-authorizer/actions/workflows/tests.yml)
+[![Tests](https://github.com/hein-htet-hub/api-authorizer/actions/workflows/tests.yml/badge.svg)](https://github.com/hein-htet-hub/api-authorizer/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/heinhtet/api-authorizer.svg)](https://packagist.org/packages/heinhtet/api-authorizer)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
