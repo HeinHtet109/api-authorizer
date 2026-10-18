@@ -289,11 +289,11 @@ return [
     ],
 
     'error_codes' => [
-        'missing_header' => 1004,
-        'invalid_timestamp' => 1003,
+        'missing_header' => 1001,
+        'invalid_timestamp' => 1002,
         'expired_timestamp' => 1003,
-        'unknown_client' => 1003,
-        'invalid_signature' => 1003,
+        'unknown_client' => 1004,
+        'invalid_signature' => 1005,
     ],
 ];
 ```
