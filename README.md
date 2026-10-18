@@ -235,7 +235,7 @@ Rejected requests return HTTP `401` with a JSON envelope:
 ```json
 {
   "success": false,
-  "status_code": 1003,
+  "status_code": 1005,
   "message": "Invalid signature.",
   "errors": {
     "code": "invalid_signature"
