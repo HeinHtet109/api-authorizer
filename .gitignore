@@ -1,5 +1,10 @@
 /vendor/
 composer.lock
 .phpunit.result.cache
+.phpunit.cache/
+.php-cs-fixer.cache
+/coverage
 /build/
 .DS_Store
+.idea/
+.vscode/

@@ -1,5 +1,10 @@
 # Laravel API Authorizer
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/heinhtet/api-authorizer.svg)](https://packagist.org/packages/heinhtet/api-authorizer)
+[![Tests](https://github.com/heinhtet/api-authorizer/actions/workflows/tests.yml/badge.svg)](https://github.com/heinhtet/api-authorizer/actions/workflows/tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/heinhtet/api-authorizer.svg)](https://packagist.org/packages/heinhtet/api-authorizer)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+
 Protect public and internal Laravel APIs with HMAC-SHA256 request signing. Every request must carry a
 signed set of headers (`X-POWERED-BY`, `X-TIMESTAMP`, `X-SIGNATURE`) that prove the caller is authentic,
 that the request was not tampered with in transit, and that it is not a replay of a previously captured
@@ -372,6 +377,12 @@ $headers = ApiAuthorizer::headers(
 $this->getJson('/api/v1/orders?page=1', $headers)->assertOk();
 ```
 
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. Security issues are
+handled privately as described in [SECURITY.md](SECURITY.md), not in the public issue tracker.
+Release notes live in [CHANGELOG.md](CHANGELOG.md).
+
 ## License
 
-MIT. See [LICENSE](LICENSE).
+API Authorizer is open-sourced software licensed under the [MIT license](LICENSE.md).

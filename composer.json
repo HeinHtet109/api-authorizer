@@ -14,12 +14,17 @@
     ],
     "license": "MIT",
     "type": "library",
+    "homepage": "https://github.com/heinhtet/api-authorizer",
     "authors": [
         {
             "name": "Hein Htet",
             "role": "Developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/heinhtet/api-authorizer/issues",
+        "source": "https://github.com/heinhtet/api-authorizer"
+    },
     "require": {
         "php": "^8.3",
         "illuminate/http": "^10.0|^11.0|^12.0|^13.0",

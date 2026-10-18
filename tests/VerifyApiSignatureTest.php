@@ -46,7 +46,7 @@ it('rejects a request with no signed headers', function () {
     $response->assertUnauthorized()
         ->assertJson([
             'success' => false,
-            'status_code' => 1004,
+            'status_code' => 1001,
             'message' => 'Missing required headers: X-POWERED-BY, X-TIMESTAMP, X-SIGNATURE.',
             'errors' => ['code' => 'missing_header'],
         ]);
@@ -59,7 +59,7 @@ it('rejects a request missing only the signature header', function () {
     $this->getJson('/api/v1/orders', $headers)
         ->assertUnauthorized()
         ->assertJson([
-            'status_code' => 1004,
+            'status_code' => 1001,
             'message' => 'Missing required headers: X-SIGNATURE.',
         ]);
 });
@@ -70,7 +70,7 @@ it('rejects a non-numeric timestamp', function () {
     $this->getJson('/api/v1/orders', $headers)
         ->assertUnauthorized()
         ->assertJson([
-            'status_code' => 1003,
+            'status_code' => 1002,
             'message' => 'Invalid timestamp.',
             'errors' => ['code' => 'invalid_timestamp'],
         ]);
@@ -108,7 +108,7 @@ it('rejects an unknown powered-by client', function () {
     $this->getJson('/api/v1/orders', $headers)
         ->assertUnauthorized()
         ->assertJson([
-            'status_code' => 1003,
+            'status_code' => 1004,
             'message' => 'Invalid client.',
             'errors' => ['code' => 'unknown_client'],
         ]);
@@ -121,7 +121,7 @@ it('rejects an invalid signature', function () {
     $this->getJson('/api/v1/orders', $headers)
         ->assertUnauthorized()
         ->assertJson([
-            'status_code' => 1003,
+            'status_code' => 1005,
             'message' => 'Invalid signature.',
             'errors' => ['code' => 'invalid_signature'],
         ]);
