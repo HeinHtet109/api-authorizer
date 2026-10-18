@@ -245,11 +245,11 @@ Rejected requests return HTTP `401` with a JSON envelope:
 
 | `errors.code`       | `status_code` (default) | Message                                            |
 | ------------------- | ----------------------- | -------------------------------------------------- |
-| `missing_header`    | 1004                    | `Missing required headers: X-POWERED-BY, ...`      |
-| `invalid_timestamp` | 1003                    | `Invalid timestamp.`                               |
+| `missing_header`    | 1001                    | `Missing required headers: X-POWERED-BY, ...`      |
+| `invalid_timestamp` | 1002                    | `Invalid timestamp.`                               |
 | `expired_timestamp` | 1003                    | `Request expired.`                                 |
-| `unknown_client`    | 1003                    | `Invalid client.`                                  |
-| `invalid_signature` | 1003                    | `Invalid signature.`                               |
+| `unknown_client`    | 1004                    | `Invalid client.`                                  |
+| `invalid_signature` | 1005                    | `Invalid signature.`                               |
 
 When an `X-REQUEST-ID` header is present it is echoed back on both successful and rejected responses so
 you can correlate client and server logs.
