@@ -56,4 +56,4 @@ standards a change must meet, and the traps in this repository.
 - Add a one-sentence header describing the problem the PR solves.
 - Describe the change and why it is needed, and why you chose this approach over another.
 - Complete the AI disclosure section of the pull request template.
-- Make sure CI is green.
+- Run `composer test` locally before opening the pull request. The suite is not run in CI, so the local run is the only gate.

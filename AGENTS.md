@@ -29,7 +29,7 @@ There is no `artisan` file, so `php artisan` fails here. Orchestra Testbench shi
 composer update        # installs dev tooling (there is no committed composer.lock)
 composer test          # vendor/bin/pest
 composer pint          # vendor/bin/pint
-vendor/bin/pint --test # style check, as CI runs it
+vendor/bin/pint --test # check style without rewriting files
 ```
 
 `php artisan make:*` generators tell you the file does not exist. Create each file by hand, next to its
@@ -48,7 +48,8 @@ followed by `->in(__DIR__)`; a bare call throws at bootstrap on Pest 4.
   fixture, a test or a log line is a real vulnerability.
 - **Keep signatures timing-safe.** Compare with `hash_equals`; never `===`.
 - **Write code that runs on every supported major** (PHP 8.3+, Laravel 10–13). An API that exists in
-  only one major breaks consumers on the others. CI installs each combination.
+  only one major breaks consumers on the others. CI does not run the suite (Actions are unavailable),
+  so run `composer test` locally against more than one Laravel major when you touch version-sensitive code.
 - **Answer Laravel questions with Boost's `search-docs` tool**, not from memory. Memory stops at the
   training date and can describe APIs that have since changed.
 - **Update `README.md` and `CHANGELOG.md`** for any behaviour, header, config or error-code change.
